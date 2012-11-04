@@ -8,7 +8,7 @@ class TweetForm(forms.Form):
     tweet = forms.CharField(max_length=200, required=True, widget=forms.Textarea(attrs={'rows':'3', 'cols':'67'}))
 
 class SignUpForm(forms.Form):
-    username = forms.CharField(label='username', required=True, min_length=1, max_length=20)
+    username = CharField(label='username', required=True, min_length=1, max_length=20)
     password = forms.CharField(label='password', widget=forms.PasswordInput, required=True, min_length=6, max_length=20)
 
     def clean_username(self):
